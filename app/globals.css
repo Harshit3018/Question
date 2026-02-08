@@ -3,17 +3,22 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-spin-slow: spin 8s linear infinite;
 }
 
 :root {
-  --background: #fff0f5; /* Lavender Blush */
-  --foreground: #4a0e1c; /* Dark Red/Brown */
+  --background: #fff0f5;
+  /* Lavender Blush */
+  --foreground: #4a0e1c;
+  /* Dark Red/Brown */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2a0a12; /* Darker Romantic Background */
-    --foreground: #fce7ec; /* Light Pink */
+    --background: #2a0a12;
+    /* Darker Romantic Background */
+    --foreground: #fce7ec;
+    /* Light Pink */
   }
 }
 
@@ -28,13 +33,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #ff69b4;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #ff1493;
 }

@@ -45,5 +45,15 @@ The project is configured for static export (`output: 'export'`), making it easy
 
 ## Customization
 
+### Adding Music and Photos
+1. **Music**: 
+   - Create a folder `public/music` if it doesn't exist.
+   - Add your MP3 files: `teri-jhuki-nazar.mp3`, `baatein-ye-kabhi-na.mp3`, `labon-ko.mp3`, `haan-tu-hai.mp3`, `zara-sa.mp3`.
+   - Update `constants/romantic.ts` if your filenames differ.
+
+2. **Photos**:
+   - The site uses placeholders by default. 
+   - To use your own, upload photos to a hosting service or place them in `public/photos` and update the URLs in `constants/romantic.ts`.
+
 - Modify `components/ValentineInterface.tsx` to change the romantic text.
 - Adjust colors in `app/globals.css` or Tailwind classes.
