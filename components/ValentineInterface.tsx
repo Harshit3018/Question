@@ -126,7 +126,7 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
 
             <div className={`absolute bottom-4 text-sm font-serif italic ${variant === 'romantic' ? 'text-white/40' : 'text-gray-400'
                 }`}>
-                {variant === 'romantic' ? 'Made with love specifically for you' : 'Have a great day'}
+                {variant === 'romantic' ? 'Made with love specifically for you by HARSHIT' : 'Have a great day'}
             </div>
         </div>
     );
