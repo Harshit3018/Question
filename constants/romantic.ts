@@ -43,3 +43,24 @@ export const MEMORY_PHOTOS = [
         caption: "Forever and always."
     }
 ];
+
+export const INSTAGRAM_REELS = [
+    {
+        url: "https://www.instagram.com/reel/DTmelgmEtyz/?igsh=eXAza2IxZ2R6Zmhw",
+        caption: "Special Moment 1 ✨"
+    },
+    {
+        url: "https://www.instagram.com/reel/DUdrBhOiqEM/?igsh=MWJranF3cHU1bGphNA==",
+        caption: "Special Moment 2 💖"
+    }
+];
+
+// 🕵️ ANONYMOUS NOTIFICATION CONFIGURATION 🕵️
+// Get your free access key from https://web3forms.com/
+// 1. Go to the site
+// 2. Enter your email
+// 3. Copy the Access Key sent to your email
+export const WEB3FORMS_ACCESS_KEY = "YOUR-ACCESS-KEY-HERE";
+
+// If you leave this empty, notifications will be disabled.
+export const NOTIFICATION_EMAIL_SUBJECT = "New Valentine Response ❤️";

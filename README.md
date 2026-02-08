@@ -59,3 +59,8 @@ The project is configured for static export (`output: 'export'`), making it easy
 
 - Modify `components/ValentineInterface.tsx` to change the romantic text.
 - Adjust colors in `app/globals.css` or Tailwind classes.
+3. **Anonymous Notifications**:
+   - The site uses Web3Forms to email you *silently* when they answer.
+   - Go to [Web3Forms](https://web3forms.com/).
+   - Enter your email to get a free Access Key.
+   - Open `constants/romantic.ts` and paste your Access Key into `WEB3FORMS_ACCESS_KEY`.

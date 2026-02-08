@@ -1,10 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Clock, Music } from 'lucide-react';
+import { Heart, Clock, Music, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import MusicPlayer from './MusicPlayer';
 import PhotoGallery from './PhotoGallery';
+import { INSTAGRAM_REELS } from '@/constants/romantic';
 
 interface ValentineInterfaceProps {
     variant?: 'romantic' | 'neutral';
@@ -82,8 +83,8 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
 
                     {/* Date Display */}
                     <div className={`flex items-center gap-3 px-6 py-3 rounded-full text-sm font-mono border shadow-sm backdrop-blur-md mt-8 ${variant === 'romantic'
-                            ? 'bg-white/20 text-white border-white/30'
-                            : 'bg-white/80 text-gray-500 border-gray-200'
+                        ? 'bg-white/20 text-white border-white/30'
+                        : 'bg-white/80 text-gray-500 border-gray-200'
                         }`}>
                         <Clock className={`w-4 h-4 ${variant === 'romantic' ? 'text-white' : 'text-slate-400'}`} />
                         <span>{new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
@@ -115,6 +116,45 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
                             <div className="mt-8 text-right font-serif text-2xl italic opacity-80">
                                 - Yours Always
                             </div>
+                        </motion.div>
+
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/40 to-transparent my-10" />
+
+                        {/* Instagram Reels Section */}
+                        <div className="flex flex-col items-center gap-8 w-full max-w-4xl">
+                            <h3 className="text-2xl font-serif text-white/90">Our Special Moments</h3>
+                            <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
+                                {INSTAGRAM_REELS.map((reel, index) => (
+                                    <motion.a
+                                        key={index}
+                                        href={reel.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="flex flex-col items-center gap-3 p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all flex-1 min-w-[280px]"
+                                    >
+                                        <div className="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <Instagram className="w-6 h-6 text-white" />
+                                        </div>
+                                        <span className="text-white font-medium">{reel.caption}</span>
+                                        <span className="text-white/60 text-xs">View on Instagram</span>
+                                    </motion.a>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/40 to-transparent my-10" />
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="max-w-3xl text-center px-6"
+                        >
+                            <p className="text-xl md:text-2xl text-white font-bold leading-relaxed drop-shadow-md">
+                                I have a busy schedule including cooking, gym , housekeeping, laundry to college
+                            </p>
                         </motion.div>
                     </>
                 )}

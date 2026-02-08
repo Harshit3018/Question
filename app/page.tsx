@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import QuestionScreen from '@/components/QuestionScreen';
 import ValentineInterface from '@/components/ValentineInterface';
 import { HeartCrack } from 'lucide-react';
+import { WEB3FORMS_ACCESS_KEY, NOTIFICATION_EMAIL_SUBJECT } from '@/constants/romantic';
 
 type ViewState = 'loading' | 'question' | 'accepted' | 'rejection_message' | 'neutral';
 
@@ -15,22 +16,61 @@ export default function Home() {
     // Check local storage on mount
     const visited = localStorage.getItem('firstVisitCompleted');
     if (visited) {
-      // Returning visitors always see the main Valentine interface
+      // Returning visitors always see the main Valentine interface (assumed 'yes' if visited before unless specifically rejected locally, but let's keep it simple)
       setView('accepted');
     } else {
       setView('question');
     }
   }, []);
 
+  const sendNotification = async (answer: string) => {
+    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR-ACCESS-KEY-HERE") {
+      console.warn("Notification skipped: No Web3Forms Access Key configured.");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: NOTIFICATION_EMAIL_SUBJECT,
+          message: `Someone answered: ${answer} ❤️`,
+          timestamp: new Date().toLocaleString(),
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        console.log("Notification sent successfully!");
+      } else {
+        console.error("Failed to send notification:", result);
+      }
+    } catch (error) {
+      console.error("Error sending notification:", error);
+    }
+  };
+
   const handleAccept = () => {
     localStorage.setItem('firstVisitCompleted', 'true');
     localStorage.setItem('answer', 'yes');
     setView('accepted');
+
+    // Send anonymous notification
+    sendNotification("YES! They said YES! 🎉");
   };
 
   const handleReject = () => {
     localStorage.setItem('firstVisitCompleted', 'true');
     localStorage.setItem('answer', 'no');
+
+    // Send anonymous notification even for rejection, so you know.
+    sendNotification("They said No 💔");
+
     setView('rejection_message');
 
     // Show message for 3 seconds then go to neutral interface
