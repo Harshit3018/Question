@@ -153,7 +153,7 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
                             className="max-w-3xl text-center px-6"
                         >
                             <p className="text-xl md:text-2xl text-white font-bold leading-relaxed drop-shadow-md">
-                                I have a busy schedule including cooking, gym , housekeeping, laundry to college
+                                Keep in mind that , I have a busy schedule including cooking, gym , housekeeping, laundry to college thatswhy you feel that i am busy..!!
                             </p>
                         </motion.div>
                     </>
