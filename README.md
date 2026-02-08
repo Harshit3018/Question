@@ -45,11 +45,13 @@ The project is configured for static export (`output: 'export'`), making it easy
 
 ## Customization
 
+### Customization
+
 ### Adding Music and Photos
 1. **Music**: 
-   - Create a folder `public/music` if it doesn't exist.
-   - Add your MP3 files: `teri-jhuki-nazar.mp3`, `baatein-ye-kabhi-na.mp3`, `labon-ko.mp3`, `haan-tu-hai.mp3`, `zara-sa.mp3`.
-   - Update `constants/romantic.ts` if your filenames differ.
+   - Open `constants/romantic.ts`.
+   - Replace the `spotifyEmbedUrl` with your own Spotify Track links.
+   - Format: `https://open.spotify.com/embed/track/{TRACK_ID}`.
 
 2. **Photos**:
    - The site uses placeholders by default. 

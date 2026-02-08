@@ -1,33 +1,23 @@
 export const MUSIC_PLAYLIST = [
     {
         title: "Teri Jhuki Nazar",
-        artist: "Shafqat Amanat Ali",
-        url: "/music/teri-jhuki-nazar.mp3", // Use this folder structure
-        cover: "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=400&h=400&fit=crop"
+        spotifyEmbedUrl: "https://open.spotify.com/embed/track/3beYHVCFKzbdNjJqjKeYpM?utm_source=generator&theme=0",
     },
     {
-        title: "Baatein Ye Kabhi Na (Male)",
-        artist: "Arijit Singh",
-        url: "/music/baatein-ye-kabhi-na.mp3",
-        cover: "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=400&h=400&fit=crop"
+        title: "Baatein Ye Kabhi Na",
+        spotifyEmbedUrl: "https://open.spotify.com/embed/track/0PxMHdQ6bSz9q0eJj3kJzb?utm_source=generator&theme=0",
     },
     {
         title: "Labon Ko",
-        artist: "KK",
-        url: "/music/labon-ko.mp3",
-        cover: "https://images.unsplash.com/photo-1518972559570-7cc1309f3229?w=400&h=400&fit=crop"
+        spotifyEmbedUrl: "https://open.spotify.com/embed/track/6GQK4G5o60E8YA18DGpAzv?utm_source=generator&theme=0",
     },
     {
         title: "Haan Tu Hai",
-        artist: "KK",
-        url: "/music/haan-tu-hai.mp3",
-        cover: "https://images.unsplash.com/photo-1459749411177-0473ef7161a0?w=400&h=400&fit=crop"
+        spotifyEmbedUrl: "https://open.spotify.com/embed/track/5WncH5iZ5GFlnXm7jKEXVP?utm_source=generator&theme=0",
     },
     {
         title: "Zara Sa",
-        artist: "KK",
-        url: "/music/zara-sa.mp3",
-        cover: "https://images.unsplash.com/photo-1516280440614-6697288d5d38?w=400&h=400&fit=crop"
+        spotifyEmbedUrl: "https://open.spotify.com/embed/track/4vgCpNUUcpEIBifidhQOnR?utm_source=generator&theme=0",
     }
 ];
 
