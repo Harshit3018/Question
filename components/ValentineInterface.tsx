@@ -65,12 +65,12 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
                             ? 'bg-gradient-to-r from-rose-600 to-pink-600'
                             : 'bg-gradient-to-r from-slate-600 to-gray-500'
                         }`}>
-                        Happy Valentine’s Day
+                        Happy February’s Day
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-light italic">
                         {variant === 'romantic'
-                            ? "\"Every love story is beautiful, but ours is my favorite.\""
+                            ? "\"Welcome to the world of your dreams , which you love the most.\""
                             : "Wishing you a wonderful day filled with love."}
                     </p>
 
@@ -78,7 +78,7 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
 
                     {variant === 'romantic' && (
                         <p className="text-lg text-rose-800 dark:text-rose-200 font-medium tracking-wide">
-                            Forever starts with us.
+                            Till the path you wants to go.
                         </p>
                     )}
 
