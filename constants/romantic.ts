@@ -46,11 +46,11 @@ export const MEMORY_PHOTOS = [
 
 export const INSTAGRAM_REELS = [
     {
-        url: "https://www.instagram.com/reel/DTmelgmEtyz/?igsh=eXAza2IxZ2R6Zmhw",
+        url: "https://www.instagram.com/reel/DS49eC8D5Ep/?igsh=aTk1bjJ2ZzlrYm9v",
         caption: "Special Moment 1 ✨"
     },
     {
-        url: "https://www.instagram.com/reel/DUdrBhOiqEM/?igsh=MWJranF3cHU1bGphNA==",
+        url: "https://www.instagram.com/reel/DRR_LD0AX8r/?igsh=MXE2bjlrdm1lZDkyYw==",
         caption: "Special Moment 2 💖"
     }
 ];
