@@ -62,13 +62,13 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
                     </motion.div>
 
                     <h1 className={`text-5xl md:text-7xl font-bold font-serif leading-tight py-4 ${textGradient}`}>
-                        Happy Valentine’s Day
+                        Happy BirthDay In Advanced
                     </h1>
 
                     <p className={`text-xl md:text-3xl font-light italic max-w-2xl ${variant === 'romantic' ? 'text-white/90' : 'text-gray-500'
                         }`}>
                         {variant === 'romantic'
-                            ? "\"Every love story is beautiful, but ours is my favorite.\""
+                            ? "\"One day, you’ll look back and realize your patience was quietly changing everything.\""
                             : "Wishing you a wonderful day filled with love."}
                     </p>
 
@@ -76,7 +76,7 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
 
                     {variant === 'romantic' && (
                         <p className="text-2xl text-white font-medium tracking-widest uppercase drop-shadow-sm">
-                            Forever starts with us
+                            Chase dreams, I’ll cheer always.
                         </p>
                     )}
 
@@ -107,10 +107,10 @@ export default function ValentineInterface({ variant = 'romantic' }: ValentineIn
                         >
                             <h3 className="text-3xl font-serif mb-6 text-center">My Promise to You</h3>
                             <p className="text-lg leading-relaxed font-light mb-4">
-                                From the moment you said "Yes", my world turned pink. I promise to cherish every laugh, wipe away every tear, and hold your hand through every storm.
+                                I promise to choose our friendship every day — with honesty, loyalty, and a heart that always has room for you.
                             </p>
                             <p className="text-lg leading-relaxed font-light">
-                                You are my song, my muse, and my forever Valentine. Let's make memories that outlast the stars.
+                                I promise to stay your constant — cheering you on, annoying you a little, and loving you a lot, always.
                             </p>
                             <div className="mt-8 text-right font-serif text-2xl italic opacity-80">
                                 - Yours Always
